@@ -9,7 +9,7 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
     <!-- Jumbotron -->
     <div class="jumbotron">
-      <h1 class="text-center">Train Yourself</h1>
+      <h1 class="text-center" id="header">Train Yourself</h1>
     </div>
 
     
@@ -68,16 +68,16 @@
                 <input class="form-control" id="name-input" type="text">
               </div>
               <div class="form-group row">
-                <label for="email-input">Destination:</label>
-                <input class="form-control" id="email-input" type="email">
+                <label for="destination-input">Destination:</label>
+                <input class="form-control" id="destination-input" type="destination">
               </div>
               <div class="form-group row">
-                <label for="age-input">First Train Time (HH:mm -military time):</label>
-                <input class="form-control" id="age-input" type="number">
+                <label for="time-input">First Train Time (HH:mm -military time):</label>
+                <input class="form-control" id="time-input" type="number">
               </div>
               <div class="form-group row">
-                <label for="comment-input">Frequency</label>
-                <textarea class="form-control" id="comment-input" rows="1"></textarea>
+                <label for="frequency-input">Frequency</label>
+                <textarea class="form-control" id="frequency-input" rows="1"></textarea>
               </div>
               <button class="btn btn-default" id="add-user" type="submit">Submit</button>
             </form>
