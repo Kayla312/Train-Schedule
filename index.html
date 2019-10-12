@@ -1,102 +1,96 @@
 <!DOCTYPE html>
-
 <html lang="en-us">
-
-<head>
-
-  <meta charset="UTF-8">
-  <title>Sign-Up Today!</title>
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/style.css">
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Follow the Tracks!</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-
-      <!-- Moment.js Reference -->
+    <!-- Moment.js Reference -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-</head>
+  </head>
 
-<body>
-
-  <div class="container">
-
+  <body>
     <br>
-
-    <!-- Jumbotron -->
-    <div class="jumbotron">
-      <h1 class="text-center" id="header">Train Yourself</h1>
-    </div>
-
-    
-    <!-- current train schedule  -->
-    <div class="row">
-
-            <div class="col-md-12">
-      
-              <!-- Current Train Schedule-->
-              <div class="card mb-4">
-                <div class="card-body">
-                  Current Train Schedule
-                  <table class="table table-sm table-hover" id='employee-table'>
-                    <thead>
-                      <tr>
-                        <th scope="col">Train Name</th>
-                        <th scope="col">Destination</th>
-                        <th scope="col">Frequency (min)</th>
-                        <th scope="col">Next Arrival</th>
-                        <th scope="col">Minutes Away</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+    <div class="container">
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 class="text-center" id="header">Train Yourself</h1>
+      </div>
+      <!-- current train schedule  -->
+      <div class="row">
+          <div class="col-md-12">
+            <!-- Current Train Schedule-->
+            <div class="card mb-4">
+              <h2 class="card-body">
+                Current Train Schedule
+              </h2>
+                <table class="table table-sm table-hover" id='employee-table'>
+                  <thead>
+                    <tr>
+                      <th scope="col">Train Name</th>
+                      <th scope="col">Destination</th>
+                      <th scope="col">Frequency (min)</th>
+                      <th scope="col">Next Arrival</th>
+                      <th scope="col">Minutes Away</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
             </div>
-        </div>
-    
-    <div class="row">
-
-      <!-- add train card-->
-      <div class="col-lg-12">
-        <div class="card card-default">
-          <div class="card-header">
-            Add Train
           </div>
-          <div class="card-body">
-
-            <!-- added train csrd, with details -->
-            <form role="form">
-              <div class="form-group row">
-                <label for="name-input">Train Name:</label>
-                <input class="form-control" id="name-input" type="text">
+        </div>
+      <div class="row">
+        <!-- add train card-->
+        <div class="col-lg-12">
+          <div class="card card-default">
+            <h2 class="card-header">
+              Add Train
+            </h2>
+            <div class="card-body">
+              <!-- added train csrd, with details -->
+              <div class='container'>
+                <form role="form">
+                  <div class="form-group row">
+                    <label for="name-input">
+                      Train Name:
+                    </label>
+                    <input class="form-control" id="name-input" type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="destination-input">
+                      Destination:
+                    </label>
+                    <input class="form-control" id="destination-input" type="destination">
+                  </div>
+                  <div class="form-group row">
+                    <label for="time-input">
+                      First Train Time (HH:mm -military time):
+                    </label>
+                    <input class="form-control" id="time-input" type="number">
+                  </div>
+                  <div class="form-group row">
+                    <label for="frequency-input">
+                      Frequency
+                    </label>
+                    <textarea class="form-control" id="frequency-input" rows="1"></textarea>
+                  </div>
+                  <button class="btn btn-outline-dark btn-lg" id="add-train" type="submit">
+                    Submit
+                  </button>
+                </form>
               </div>
-              <div class="form-group row">
-                <label for="destination-input">Destination:</label>
-                <input class="form-control" id="destination-input" type="destination">
-              </div>
-              <div class="form-group row">
-                <label for="time-input">First Train Time (HH:mm -military time):</label>
-                <input class="form-control" id="time-input" type="number">
-              </div>
-              <div class="form-group row">
-                <label for="frequency-input">Frequency</label>
-                <textarea class="form-control" id="frequency-input" rows="1"></textarea>
-              </div>
-              <button class="btn btn-default" id="add-train" type="submit">Submit</button>
-            </form>
+            </div> 
           </div>
         </div>
       </div>
-
     </div>
-
-  </div>
-
-
-  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-</body>
+    <br>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script> -->
+  </body>
 
 </html>
