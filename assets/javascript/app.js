@@ -15,17 +15,17 @@ $("#add-train").on("click", function(event) {
 
     // Capture user inputs and store them into variables
     var name = $("#name-input").val().trim();
-    var email = $("#destination-input").val().trim();
-    var age = $("time-input").val().trim();
-    var comment = $("#frequency-input").val().trim();
+    var destination = $("#destination-input").val().trim();
+    var firstTrain = $("time-input").val().trim();
+    var frequency = $("#frequency-input").val().trim();
 
     console.log(name);
-    console.log(email);
-    console.log(age);
-    console.log(comment);
+    console.log(destination);
+    console.log(firstTrain);
+    console.log(frequency);
 
     $("#name-display").text(name);
-    $("#destination-display").text(email);
-    $("#time-display").text(age);
-    $("#frequency-display").text(comment);
+    $("#destination-display").text(destination);
+    $("#time-display").text(firstTrain);
+    $("#frequency-display").text(frequency);
 });
